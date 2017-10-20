@@ -1,4 +1,4 @@
-package com.shivajivarma.codebase.spiralMatrix;
+package com.shivajivarma.codebase.spiral_matrix;
 
 import java.util.Scanner;
 
