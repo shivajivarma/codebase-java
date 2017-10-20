@@ -1,4 +1,4 @@
-[Spiral Matrix](README.md)
+[Spiral Matrix](SpiralMatrix.java)
 ===============
 
 For given matrix size, print number is __Spiral__ form.
