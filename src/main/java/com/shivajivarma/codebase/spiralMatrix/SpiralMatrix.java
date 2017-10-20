@@ -40,15 +40,22 @@ public class SpiralMatrix {
 
     public static void main(String args[]) throws Exception {
 
-        Scanner in = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        System.out.println("Enter N*N Matrix order :: ");
-        int N = in.nextInt();
-        in.close();
+        char ch;
 
-        int[][] spiral = createSpiralMatrix(N);
+        do {
+            System.out.println("Enter N*N Matrix order :: ");
+            int N = scan.nextInt();
 
-        printMatrix(spiral, N);
+            int[][] spiral = createSpiralMatrix(N);
 
+            printMatrix(spiral, N);
+
+            System.out.println("\nDo you want to continue (Type y or n) \n");
+            ch = scan.next().charAt(0);
+        } while (ch == 'Y' || ch == 'y');
+
+        scan.close();
     }
 }
