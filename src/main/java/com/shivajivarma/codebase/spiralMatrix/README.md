@@ -5,45 +5,34 @@ For given matrix size, print number is __Spiral__ form.
 
 
 ### CODE
-```c
-int isAnagram(char *a, char *b) {
-
-    int result = 1; // here '1' represents true and '0' represents false
-
-    /* Make a copy string 'b', so that actual 'b' value is not modified while computations. */
-    char *bCopy = NULL;
-    bCopy = (char *) malloc(strlen(b) * sizeof(char));
-    strcpy(bCopy, b);
-
-    /* First compare lengths, if not equal then they are not anagrams. */
-    if (strlen(a) == strlen(bCopy)) {
-
-        int flag, i, j;
-        /* Loop through string 'a' and find match for each character in string 'bCopy' */
-        for (i = 0, flag = 0; i < strlen(a); i++) {
-
-            for (j = 0; j < strlen(bCopy); j++) {
-                if (a[i] == bCopy[j]) {
-                    flag = 1; // If matching character is found, update the flag to true(1)
-
-                    /* Delete the matching character in bCopy, so that next time we don't repeat search on it. */
-                    memmove(bCopy + j, bCopy + j + 1, strlen(bCopy) - j);
-                    break;
-                }
+```java
+public class SpiralMatrix {
+    
+    public static int[][] createSpiralMatrix(int N) {
+        int current = 1;
+        // Start in the corner
+        int x = 0, y = 0, dx = 1, dy = 0;
+        int spiralMatrix[][] = new int[N][N];
+    
+        while (current <= N * N) {
+            // Go in a straight line
+            spiralMatrix[x][y] = current++;
+            int nx = x + dx, ny = y + dy;
+    
+            // When you hit the edge...
+            if (nx < 0 || nx == N || ny < 0 || ny == N || spiralMatrix[nx][ny] != 0) {
+                // ...turn right
+                int t = dy;
+                dy = dx;
+                dx = -t;
             }
-
-            if (flag == 0) {
-                result = 0;
-                break;
-            }
+            x += dx;
+            y += dy;
         }
-
-    } else {
-        result = 0;
+    
+        return spiralMatrix;
     }
-
-    return result;
-
+    
 }
 ```
 
