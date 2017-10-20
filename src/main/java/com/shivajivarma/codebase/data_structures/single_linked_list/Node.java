@@ -1,4 +1,4 @@
-package com.shivajivarma.codebase.ds.single_linked_list;
+package com.shivajivarma.codebase.data_structures.single_linked_list;
 
 public class Node {
     private int data;
