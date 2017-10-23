@@ -1,10 +1,10 @@
 [Display Patterns](http://shivajivarma.com/code-base/2017/10/23/display-patterns)
 ===============
 
-Programs to display patterns like 
-    a. right angled triangle (Orientation Right).
-    b. right angled triangle (Orientation Left).
-    c. Given 'n', print the symbol 'Z' spanning n rows using '*' symbol. Value of n>2 and n<=20.
+Programs to display patterns like  
+a. Right angled triangle (Orientation Right).  
+b. Right angled triangle (Orientation Left).  
+c. Given 'n', print the symbol 'Z' spanning n rows using '*' symbol. Value of n>2 and n<=20.  
 
 ### RIGHT ANGLED TRIANGLE (ORIENTATION RIGHT)
 ```java
