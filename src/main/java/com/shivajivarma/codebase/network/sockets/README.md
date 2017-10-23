@@ -3,7 +3,7 @@ Sockets
 
 Communicating between two devices using Java __Sockets__.
 
-__Server :__ Listens to requests from clients, process them and replies back.
+__Server :__ Listens to requests from clients, process them and replies back.  
 __Client :__ Takes input from user and send it server, recieves response and displays it.
 
 ### SERVER CODE
