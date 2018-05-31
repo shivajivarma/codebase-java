@@ -111,9 +111,8 @@ class SinglyLinkedList {
             System.out.println(head.getData());
             return;
         }
-        Node ptr = head;
         System.out.print(head.getData() + "->");
-        ptr = head.getLink();
+        Node ptr = head.getLink();
         while (ptr.getLink() != null) {
             System.out.print(ptr.getData() + "->");
             ptr = ptr.getLink();
